@@ -17,10 +17,5 @@ Se corrige error y se conecta de manera exitosa con user invitada a la DB prueba
 
 ### Pantallazo 3
 
-Imágenes en registro local.
-![Creacion contenedor](./images/images_registry_local.png)
-
-### Pantallazo 4
-
 Erro al querer eliminar imagen cuando esta siendo ejecutada por un contenedor
 ![Creacion contenedor](./images/error_eliminar_imagen.png)
