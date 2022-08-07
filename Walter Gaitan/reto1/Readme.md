@@ -35,4 +35,3 @@ estar parado el contenedor).
 
 - Armar una solucion.md y usando Markdown y agregar las images de la solución:
 
-- Documentacion [Markdown](https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
