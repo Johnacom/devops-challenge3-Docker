@@ -1,0 +1,20 @@
+version: '3' # Version 3 para no crear atributos links, es decir, los contenedores se van a crear en un mismo segmento de red
+services:
+  postgres:
+    build: ./postgres/ # Compilar el Dockerfile
+    environment: # Declaracion de varaibles para levantar correctamente el contenedor
+      - POSTGRES_USER=invitado
+      - POSTGRES_PASSWORD=invitado
+      - POSTGRES_DB=invitado
+  myapp:
+    build: ./myapp/ # Compilas el Dockerfile
+    ports:
+      - 5000:5000 # Exponer el puerto
+    environment: # Declaracion de varaibles para levantar correctamente el contenedor
+      - POSTGRES_USER=invitado
+      - POSTGRES_PASSWORD=invitado
+      - POSTGRES_DB=myappdb
+      - POSTGRES_PORT=5432
+      - POSTGRES_HOST=postgres
+    depends_on: # Iniciar el contenedor web siempre y cuando el contenedor de DB haya iniciado.
+      - "postgres"
